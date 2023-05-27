@@ -4,15 +4,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <section class="header">
+    <section class="login-page">
+      <h1>LOGIN PAGE</h1>
+      <label for="user-name"> enter name</label>
+      <input type="text" name="users-name" id="users-name">
+      <button class="submit-button">submit</button>
+    </section>
+    <section class="header hidden">
       <header>
         <h1>What's for Dinner?</h1>
       </header> 
     </section>
-    <div class="whole">
+    <div class="whole hidden">
       <section class="recipe-page">
         <div class="main">
-          <h2>What are you looking for?</h2>
+          <h2>What are you looking for?<span>*</span></h2>
+          <div class="buttons">
           <ul style="list-style-type: none">
             <li>
               <label for="side">
@@ -33,12 +40,22 @@
               </label>
             </li>
           </ul>
+          </div>
+          <div>
             <button class="lets-cook-btn">LET'S COOK</button>
+          </div>
         </div>
       </section>
       <section class="recipe-section">
-        <p class="you-should-make hidden">YOU SHOULD MAKE:</p>
+        <div class="you-should">
+          <div class="you-should-make"></div>
+        </div>
+        <div class="food">
+          <div class="food-section"></div>
+        </div>
+        <div>
         <img class="cookpot-img" src="assets/cookpot.svg">
+        </div>
       </section>
     </div>
   </body>

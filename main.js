@@ -7,34 +7,35 @@ var cookPotImg = document.querySelector('.cookpot-img');
 var letsCookButton = document.querySelector('.lets-cook-btn');
 var recipeSection = document.querySelector('.recipe-section');
 var youShouldMake = document.querySelector('.you-should-make');
+var foodSection = document.querySelector('.food-section');
+var usersName = document.querySelector('#users-name');
+var submitButton = document.querySelector('.submit-button');
 var choiceMsg;
 
 // event listeners 
 letsCookButton.addEventListener('click', showDish);
+submitButton.addEventListener('click', loginPage);
 
+// functions
 function showDish() {
-  // show(youShouldMake);
   hide(cookPotImg);
   var sideDishSelected = sideDish.checked;
   var mainDishSelected = mainDish.checked;
   var dessertDishSelected = dessertDish.checked;
   if (sideDishSelected) {
-    choiceMsg = randomSideDish();
-    recipeSection.innerHTML = `
-    <b>
-    ${choiceMsg}</b>
-    `;
+    choiceMsg = randomSideDish(sides);
+    youShouldMake.innerText = `YOU SHOULD MAKE: `;
+    foodSection.innerHTML = `<b>${choiceMsg}</b>`;
   } else if (mainDishSelected) {
-    choiceMsg = randomMainDish();
-    recipeSection.innerHTML = `
-    <b>${choiceMsg}</b>
-    `;
+    choiceMsg = randomMainDish(mains);
+    youShouldMake.innerText = `YOU SHOULD MAKE: `;
+    foodSection.innerHTML = `<b>${choiceMsg}</b>`;
   } else if (dessertDishSelected) {
-    choiceMsg = randomDessertDish();
-    recipeSection.innerHTML = `
-    <b>${choiceMsg}</b>
-    `;
+    choiceMsg = randomDessertDish(dessert);
+    youShouldMake.innerText = `YOU SHOULD MAKE: `;
+    foodSection.innerHTML = `<b>${choiceMsg}</b>`;
   }
+
 }
 
 function randomSideDish() {
@@ -106,32 +107,35 @@ var sides = [`Miso Glazed Carrots`,
   `Garlic Butter Mushrooms`,
   `Hush Puppies`];
 
-var mains = [`Miso Glazed Carrots`,
-    `Coleslaw`,
-    `Garden Salad`,
-    `Crispy Potatoes`,
-    `Sweet Potato Tots`,
-    `Coconut Rice`,
-    `Caeser Salad`,
-   `Shrimp Summer Rolls`,
-    `Garlic Butter Mushrooms`,
-    `Hush Puppies`];
+var mains = [  "Spaghetti and Meatballs",
+  "Pineapple Chicken",
+  "Shakshuka",
+  "Thai Yellow Curry",
+  "Bibimbap",
+  "Chicken Parmesan",
+  "Butternut Squash Soup",
+  "BBQ Chicken Burgers",
+  "Ramen",
+  "Empanadas",
+  "Chicken Fried Rice",
+  "Sheet Pan Fajitas",
+  "Margarita Pizza"];
 
 var dessert = [`Apple Pie`,
-      `Lemon Meringue Pie`,
-      `Black Forest Cake`,
-      `Banana Bread`,
-      `Peach Cobbler`,
-      `Cheesecake`,
-      `Funfetti Cake`,
-      `Baklava`,
-      `Flan`,
-      `Macarons`,
-      `Macaroons`,
-      `Chocolate Cupcakes`,
-      `Pavlova`,
-      `Pumpkin Pie`,
-      `Key Lime Pie`,
-      `Tart Tatin`,
-      `Croissants`,
-      `Eclairs`];
+  `Lemon Meringue Pie`,
+  `Black Forest Cake`,
+  `Banana Bread`,
+  `Peach Cobbler`,
+  `Cheesecake`,
+  `Funfetti Cake`,
+  `Baklava`,
+  `Flan`,
+  `Macarons`,
+  `Macaroons`,
+  `Chocolate Cupcakes`,
+  `Pavlova`,
+  `Pumpkin Pie`,
+  `Key Lime Pie`,
+  `Tart Tatin`,
+  `Croissants`,
+  `Eclairs`];

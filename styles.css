@@ -9,6 +9,12 @@ body {
   background-attachment: fixed;
 }
 
+.login-page {
+  background-color: rgba(225, 225, 225, .9);
+  height: 400px;
+  width: 500px;
+}
+
 .whole {
   display: flex;
   justify-content: center;
@@ -19,12 +25,36 @@ body {
   display: flex;
   height: 80px;
   background-color: teal;
+  margin-top: -10px;
+  margin-left: -2px;
+  margin-right: -10px;
+}
+
+h2 {
+  margin-top: 40px;
+  margin-left: 40px;
 }
 
 .recipe-page {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+span {
+  color: red;
+}
+
+.you-should-make {
+  font-style: italic;
+  margin: auto;
+  margin-top: -40%;
+}
+
+.food-section {
+  font-size: 40px;
+  margin-bottom: -29%;
+  text-align: center;
 }
 
 .cookpot-img {
@@ -34,8 +64,23 @@ body {
   justify-content: flex-end;
 }
 
+#side {
+  margin-bottom: 20px;
+}
+
+#main-dish {
+  margin-bottom: 20px;
+}
+
+#dessert {
+  margin-bottom: 20px;
+}
+
 .lets-cook-btn {
   background-color: teal;
+  margin-left: 40px;
+  height: 40px;
+  width: 140px;
 }
 
 .main {
@@ -52,10 +97,6 @@ body {
   background-color: rgba(225, 225, 225, .9);
   height: 400px;
   width: 500px;
-}
-
-.you-should-make {
-  font-size: italic;
 }
 
 .hidden {
