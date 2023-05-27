@@ -20,16 +20,15 @@ letsCookButton.addEventListener('click', showDish);
 submitButton.addEventListener('click', mainLoginPage);
 
 // functions
-function mainLoginPage(event) {
+function mainLoginPage() {
   // hide(loginPage)
-  event.preventDefault();
+  // event.preventDefault();
   hide(loginPage)
   show([mainPage, wholePage])
   var username = document.getElementById('users-name').value
   if (username) {
-    welcomeMessage.textContent = `Welcome, ${username}`
+    welcomeMessage.textContent = `Welcome, ${username}!`
   }
-  console.log(welcomeMessage)
 }
 
 
