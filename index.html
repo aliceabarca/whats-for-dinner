@@ -4,7 +4,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <section class="login-page">
+      <h1>LOGIN PAGE</h1>
+      <label for="user-name"> enter name</label>
+      <input type="text" name="users-name" id="users-name">
+      <button class="submit-button">submit</button>
+    </section>
+    <section class="header hidden">
+      <header>
+        <h1>What's for Dinner?</h1>
+      </header> 
+    </section>
+    <div class="whole hidden">
+      <section class="recipe-page">
+        <div class="main">
+          <h2>What are you looking for?<span>*</span></h2>
+          <div class="buttons">
+          <ul style="list-style-type: none">
+            <li>
+              <label for="side">
+                <input type="radio" id="side" name="choice">
+                Side
+              </label>
+            </li>
+            <li>
+              <label for="main-dish">
+                <input type="radio" id="main-dish" name="choice">
+                Main Dish
+              </label>
+            </li>
+            <li>
+              <label for="dessert">
+                <input type="radio" id="dessert" name="choice">
+                Dessert
+              </label>
+            </li>
+          </ul>
+          </div>
+          <div>
+            <button class="lets-cook-btn">LET'S COOK</button>
+          </div>
+        </div>
+      </section>
+      <section class="recipe-section">
+        <div class="you-should">
+          <div class="you-should-make"></div>
+        </div>
+        <div class="food">
+          <div class="food-section"></div>
+        </div>
+        <div>
+        <img class="cookpot-img" src="assets/cookpot.svg">
+        </div>
+      </section>
+    </div>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
