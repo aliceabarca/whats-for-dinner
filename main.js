@@ -5,14 +5,13 @@ var mainDish = document.querySelector('#main-dish');
 var dessertDish = document.querySelector('#dessert');
 var cookPotImg = document.querySelector('.cookpot-img');
 var letsCookButton = document.querySelector('.lets-cook-btn');
-var recipeSection = document.querySelector('.recipe-section');
 var youShouldMake = document.querySelector('.you-should-make');
 var foodSection = document.querySelector('.food-section');
 var submitButton = document.querySelector('.submit-button');
 var welcomeMessage = document.querySelector('#welcome-message');
 var loginPage = document.querySelector('.login-page');
-var mainPage = document.querySelector('.header')
-var wholePage = document.querySelector('.whole');
+var dinnerPage = document.querySelector('.whats-for-dinner-page');
+var recipePage = document.querySelector('.recipe');
 var choiceMsg;
 
 // event listeners 
@@ -21,16 +20,13 @@ submitButton.addEventListener('click', mainLoginPage);
 
 // functions
 function mainLoginPage() {
-  // hide(loginPage)
-  // event.preventDefault();
-  hide(loginPage)
-  show([mainPage, wholePage])
-  var username = document.getElementById('users-name').value
+  hide(loginPage);
+  show([dinnerPage, recipePage]);
+  var username = document.getElementById('users-name').value;
   if (username) {
-    welcomeMessage.textContent = `Welcome, ${username}!`
+    welcomeMessage.textContent = `Welcome, ${username}!`;
   }
 }
-
 
 function showDish() {
   hide(cookPotImg);
@@ -50,7 +46,6 @@ function showDish() {
     youShouldMake.innerText = `YOU SHOULD MAKE: `;
     foodSection.innerHTML = `<b>${choiceMsg}</b>`;
   }
-
 }
 
 function randomSideDish() {
