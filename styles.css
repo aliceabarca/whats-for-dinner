@@ -9,24 +9,35 @@ body {
   background-attachment: fixed;
 }
 
+.login {
+  display: flex;
+  justify-content: center;
+  margin-top: 180px;
+}
+
 .login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: rgba(225, 225, 225, .9);
   height: 400px;
   width: 500px;
 }
 
-.whole {
+.recipe {
   display: flex;
   justify-content: center;
   justify-content:space-evenly;
   margin-top: 90px;
 }
-.header {
+
+.whats-for-dinner-page {
   display: flex;
   height: 80px;
   background-color: teal;
-  margin-top: -10px;
-  margin-left: -2px;
+  margin-top: -180px;
+  margin-left: -8px;
   margin-right: -10px;
 }
 
@@ -48,7 +59,8 @@ span {
 .you-should-make {
   font-style: italic;
   margin: auto;
-  margin-top: -40%;
+  position: center;
+  margin-top: 150px;
 }
 
 .food-section {
@@ -64,14 +76,8 @@ span {
   justify-content: flex-end;
 }
 
-#side {
-  margin-bottom: 20px;
-}
-
-#main-dish {
-  margin-bottom: 20px;
-}
-
+#main-dish,
+#side,
 #dessert {
   margin-bottom: 20px;
 }
@@ -81,22 +87,50 @@ span {
   margin-left: 40px;
   height: 40px;
   width: 140px;
+  border: none;
+  border-radius: 5px;
 }
 
-.main {
+.looking-for {
   background-color: rgba(225, 225, 225, .9);
   height: 400px;
   width: 500px;
-  
 }
 
 .recipe-section {
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
   background-color: rgba(225, 225, 225, .9);
   height: 400px;
   width: 500px;
+}
+
+.submit-button {
+  margin-top: 20px;
+  background-color: teal;
+  height: 30px;
+  width: 120px;
+  margin-right: -8px;
+}
+
+.login-page {
+  margin-bottom: 70px;
+}
+
+#user-name {
+  font-style: italic;
+  margin-left: -25px;
+}
+
+#welcome-message {
+  position: fixed;
+  right: 20px;
+  margin-top: -50px;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hidden {

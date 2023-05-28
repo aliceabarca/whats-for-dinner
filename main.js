@@ -5,18 +5,29 @@ var mainDish = document.querySelector('#main-dish');
 var dessertDish = document.querySelector('#dessert');
 var cookPotImg = document.querySelector('.cookpot-img');
 var letsCookButton = document.querySelector('.lets-cook-btn');
-var recipeSection = document.querySelector('.recipe-section');
 var youShouldMake = document.querySelector('.you-should-make');
 var foodSection = document.querySelector('.food-section');
-var usersName = document.querySelector('#users-name');
 var submitButton = document.querySelector('.submit-button');
+var welcomeMessage = document.querySelector('#welcome-message');
+var loginPage = document.querySelector('.login-page');
+var dinnerPage = document.querySelector('.whats-for-dinner-page');
+var recipePage = document.querySelector('.recipe');
 var choiceMsg;
 
 // event listeners 
 letsCookButton.addEventListener('click', showDish);
-submitButton.addEventListener('click', loginPage);
+submitButton.addEventListener('click', mainLoginPage);
 
 // functions
+function mainLoginPage() {
+  hide(loginPage);
+  show([dinnerPage, recipePage]);
+  var username = document.getElementById('users-name').value;
+  if (username) {
+    welcomeMessage.textContent = `Welcome, ${username}!`;
+  }
+}
+
 function showDish() {
   hide(cookPotImg);
   var sideDishSelected = sideDish.checked;
@@ -35,7 +46,6 @@ function showDish() {
     youShouldMake.innerText = `YOU SHOULD MAKE: `;
     foodSection.innerHTML = `<b>${choiceMsg}</b>`;
   }
-
 }
 
 function randomSideDish() {
@@ -60,8 +70,10 @@ function hide(element) {
   element.classList.add('hidden');
 }
 
-function show(element) {
-  element.classList.remove('hidden');
+function show(elements) {
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].classList.remove('hidden');
+  }
 }
 
 
